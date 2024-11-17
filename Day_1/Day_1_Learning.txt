@@ -1,0 +1,55 @@
+1. How does Python compile and run the code?
+
+
+Python is an object oriented programming language like JAVA. Pyhton is called interpreted language.
+Python doesn't convert its code into machine code. It converts it into something called bytecode.
+We need an interpreter called the Pyhton Virtual Machine to execute the bytecodes.
+STEP 1:
+      The python compiler reads a python source code in the code editor. In thisi first stage, the execution of the code starts
+
+STEP 2:
+      After writing Python code it is then saved as a .py file in our system. In this, there are instructions written by a Python script for the system
+
+STEP 3:
+      In this the compilation stage comes in which source code is converted into a byte code. Python compiler also 
+      checks the syntax error in this step and genrates a .pyc file.
+
+STEP 4:
+      PVM converts python byte code into machine executable code and in interpreter reads and executes the given file line by line.
+      You will get your final desired output will come as according to your program.
+
+2. Difference between Python and JAVA
+
+
+Python :                                                                                              JAVA :
+1. Knowns for its simplicity and readability                                                          1. Has a verbose syntax with explicit block delimiters like {} and requires ; to terminate statements
+2. Slower due to interpretation overhead but faster for development                                   2. Faster than Python for execution due to JVM optimisations, including Just-In-Time(JIT) compilation
+3. Dynamically typed                                                                                  3. Statically typed  
+4. Uses Python Virtual Machine (PVM)                                                                  4. Uses JAVA Virtual Machine (JVM)  
+5. Popularly used for date science, machine learning, Web development, Automation, and Prototyping    5. Used for enterprise level applications, Android development, backend systems and financial systems.
+
+
+3. Difference between Compiler and Interpreter
+
+
+Compiler :
+        1. Translates the entire source code into machine code or an intermediate form (e.g., bytecode) in a single step.
+        2. Performs translation once and produces a machine code file (e.g., .exe).
+        3. Execution of the program happens after the compilation process.
+        4. Slower during the initial compilation since it processes the entire program.
+        5. Faster during execution because the machine code is directly executed.
+        6. Reports all syntax errors in the code after the compilation phase.
+        7. You must fix errors and recompile the entire program before running it.
+        8. Generates a separate machine code file (binary or executable).
+        9. The program can run without the compiler once compiled.
+
+Interpreter : 
+        1. Translates and executes source code line by line or statement by statement.
+        2. Does not produce a standalone executable file; code must be interpreted every time it runs.
+        3. Executes the source code directly without generating a machine code file.
+        4. Faster for small programs initially, as no pre-compilation is needed.
+        5. Slower during execution since each line of code is translated and executed dynamically.
+        6. Reports errors line-by-line during execution.
+        7. Stops execution at the first error it encounters.
+        8. No separate file is generated.
+        9. The source code is required every time the program is executed.
