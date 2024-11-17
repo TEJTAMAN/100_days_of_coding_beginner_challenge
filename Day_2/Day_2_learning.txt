@@ -1,0 +1,30 @@
+1. Learn the terms: initialization, declaration and assignment of variables
+
+
+Initialization:
+The method for initializing a variable depends on the programming language and the type and storage class of the variable.
+Initialization can be done by embedding the value at compile time or by assigning it at run time.
+
+
+Declaration:
+Declarations are commonly used for variables, functions, constants, and classes.
+In strongly typed languages, declarations are required to specify the types of variables, functions, and constants before they can be used.
+
+
+Assignment:
+The assignment operator, typically =, is used to assign a value to a variable.
+
+
+2. Learn the difference between Dynamically typed and Statically typed variables
+
+
+Dynamically typed:
+Data types are determined at runtime, while the code is being executed. 
+This allows for more flexibility, but can lead to unexpected errors. 
+Examples include Python, Ruby, and JavaScript.
+
+
+Statically typed:
+Data types are determined at compile time, before the code is executed.
+This provides stricter control over variable types, but can lead to better code optimization. 
+Examples include Java, C++, and C#. 
