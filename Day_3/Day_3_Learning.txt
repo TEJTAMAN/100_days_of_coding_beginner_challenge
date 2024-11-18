@@ -1,0 +1,13 @@
+Explore various methods for reading different type of inputs
+
+1. Taking input using input() function -> this function by default takes string as input. 
+
+
+2. Taking Multiple Inputs: Multiple inputs in Python can be taken with the help of the map() and split() methods. 
+The split() method splits the space-separated inputs and returns an iterable whereas when this function is used with the map() function it can convert the inputs to float and int accordingly.
+
+3. Taking input as a list or tuple: For this, the split() and map() functions can be used. 
+As these functions return an iterable we can convert the given iterable to the list, tuple, or set accordingly.
+
+
+
