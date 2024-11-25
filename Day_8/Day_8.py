@@ -1,3 +1,6 @@
+#Create a simple calculator program that can add, subtract, multiply, and divide two integers
+
+
 def calculator():
     print("Simple Calculator")
     print("Select a arithmetic operation: \n +\n -\n *\n /\n ")
