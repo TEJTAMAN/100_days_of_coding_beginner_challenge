@@ -1,10 +1,7 @@
 def calculator():
     print("Simple Calculator")
-    print("Select a arithmetic operation: ")
-    print("+")
-    print("-")
-    print("*")
-    print("/")
+    print("Select a arithmetic operation: \n +\n -\n *\n /\n ")
+    
 
     arithmetic_operation = input("Enter the choice: ")
     if arithmetic_operation not in [ '+' , '-' , '*' , '/']:
