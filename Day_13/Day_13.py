@@ -9,12 +9,10 @@ def find_largest(num1, num2, num3):
     else:
         return num3
 
-# Input from the user
 print("Enter three numbers:")
 number1 = float(input("Enter first number: "))
 number2 = float(input("Enter second number: "))
 number3 = float(input("Enter third number: "))
 
-# Find and display the largest number
 largest = find_largest(number1, number2, number3)
 print(f"The largest number is: {largest}")
