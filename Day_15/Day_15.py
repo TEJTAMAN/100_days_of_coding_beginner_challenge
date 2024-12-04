@@ -12,6 +12,5 @@ def factorial(n):
             result *= i
         return result
 
-# Example usage
 number = int(input("Enter a number to find its factorial: "))
 print(f"The factorial of {number} is: {factorial(number)}")
