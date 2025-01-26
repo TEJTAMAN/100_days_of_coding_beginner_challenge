@@ -2,73 +2,76 @@
 
 """Encapsulation ensures that sensitive data is hidden from direct access and can only be modified through specific methods."""
 
-class BankAccount:
-    """A bank account class demonstrating encapsulation."""
+class Student:
+    """A simple class demonstrating encapsulation with user input."""
 
-    def __init__(self, account_holder, initial_balance=0):
-        """
-        Initialize the account with an account holder's name and an initial balance.
-        """
-        self.__account_holder = account_holder  # Private attribute
-        self.__balance = initial_balance  # Private attribute
+    def __init__(self, name, age):
+        self.__name = name  # Private attribute
+        self.__age = age    # Private attribute
 
-    def deposit(self, amount):
-        """Deposit money into the account."""
-        if amount > 0:
-            self.__balance += amount
-            print(f"${amount:.2f} deposited. New balance: ${self.__balance:.2f}")
+    # Getter for name
+    def get_name(self):
+        return self.__name
+
+    # Setter for name
+    def set_name(self, name):
+        if name.strip():
+            self.__name = name
         else:
-            print("Deposit amount must be positive.")
+            print("Name cannot be empty.")
 
-    def withdraw(self, amount):
-        """Withdraw money from the account."""
-        if amount > self.__balance:
-            print(f"Insufficient funds. Current balance: ${self.__balance:.2f}.")
-        elif amount <= 0:
-            print("Withdrawal amount must be positive.")
+    # Getter for age
+    def get_age(self):
+        return self.__age
+
+    # Setter for age
+    def set_age(self, age):
+        if age > 0:  # Validate age
+            self.__age = age
         else:
-            self.__balance -= amount
-            print(f"${amount:.2f} withdrawn. New balance: ${self.__balance:.2f}")
+            print("Age must be positive.")
 
-    def get_balance(self):
-        """Return the current balance."""
-        return self.__balance
+# Main program
+def main():
+    # Get user input for name and age
+    name = input("Enter the student's name: ").strip()
+    while True:
+        try:
+            age = int(input("Enter the student's age: ").strip())
+            if age > 0:
+                break
+            else:
+                print("Age must be a positive number.")
+        except ValueError:
+            print("Invalid input. Please enter a valid age.")
 
-    def get_account_holder(self):
-        """Return the account holder's name."""
-        return self.__account_holder
+    # Create a Student object
+    student = Student(name, age)
 
-    def set_account_holder(self, new_holder):
-        """Change the account holder's name."""
-        if new_holder.strip():
-            self.__account_holder = new_holder.strip()
-            print(f"Account holder name updated to {self.__account_holder}.")
-        else:
-            print("Invalid name. Account holder name not updated.")
+    # Display student details
+    print("\nStudent Details:")
+    print(f"Name: {student.get_name()}")
+    print(f"Age: {student.get_age()}")
 
-    def __str__(self):
-        """Return account details."""
-        return f"Account Holder: {self.__account_holder}, Balance: ${self.__balance:.2f}"
+    # Modify student details
+    new_name = input("\nEnter a new name for the student: ").strip()
+    student.set_name(new_name)
 
+    while True:
+        try:
+            new_age = int(input("Enter a new age for the student: ").strip())
+            if new_age > 0:
+                student.set_age(new_age)
+                break
+            else:
+                print("Age must be a positive number.")
+        except ValueError:
+            print("Invalid input. Please enter a valid age.")
 
-# Example Usage
+    # Display updated details
+    print("\nUpdated Student Details:")
+    print(f"Name: {student.get_name()}")
+    print(f"Age: {student.get_age()}")
+
 if __name__ == "__main__":
-    # Create a new bank account
-    account = BankAccount("John Doe", 500)
-
-    # Display account details
-    print(account)  # Output: Account Holder: John Doe, Balance: $500.00
-
-    # Deposit money
-    account.deposit(200)  # Output: $200.00 deposited. New balance: $700.00
-
-    # Withdraw money
-    account.withdraw(100)  # Output: $100.00 withdrawn. New balance: $600.00
-
-    # Access and modify private attributes using getters and setters
-    print(f"Current balance: ${account.get_balance():.2f}")  # Output: Current balance: $600.00
-    account.set_account_holder("Jane Doe")  # Output: Account holder name updated to Jane Doe
-    print(account.get_account_holder())  # Output: Jane Doe
-
-    # Attempt to withdraw an invalid amount
-    account.withdraw(700)  # Output: Insufficient funds. Current balance: $600.00.
+    main()
